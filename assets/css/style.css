@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap'); */
 /* Reset de base */
 * {
   margin: 0;
@@ -41,15 +40,12 @@ body {
 
 /* Menu */
 .menu a {
+  color: black;  
   text-decoration: none;
-  color: #000;
   font-weight: bold;
   margin: 0 5px;
 }
 .menu span {
-  color: #000;
+  color: #000000;
   margin: 0 5px;
-}
-.menu a:hover {
-  color: #0077cc; /* bleu au survol */
 }
