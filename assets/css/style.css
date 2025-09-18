@@ -1,0 +1,55 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap'); */
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  min-height: 60px; /* hauteur fixe de la navbar */
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.logo span {
+  font-family: "Jockey One", sans-serif;
+  font-size: 1.5em; /* tu peux ajuster */
+  font-weight: normal; /* Jockey One est déjà bold */
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* Menu */
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  margin: 0 5px;
+}
+.menu span {
+  color: #000;
+  margin: 0 5px;
+}
+.menu a:hover {
+  color: #0077cc; /* bleu au survol */
+}
