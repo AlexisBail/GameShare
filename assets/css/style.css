@@ -5,8 +5,12 @@
   box-sizing: border-box;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
+html, body {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navbar */
@@ -48,4 +52,28 @@ body {
 .menu span {
   color: #000000;
   margin: 0 5px;
+}
+
+main {
+  flex: 1;
+}
+
+/* Footer */
+.footer {
+  background-color: #e6e6e6;   /* même gris que la navbar */
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+  color: #000;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  color: #0077cc; /* bleu au survol */
 }
