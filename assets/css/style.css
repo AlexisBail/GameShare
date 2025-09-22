@@ -109,7 +109,6 @@ h2 {
 .card {
   background: linear-gradient(to bottom, #E2E2E2, #ffffff);
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 20px;
   width: 250px;
   text-align: center;
@@ -136,6 +135,147 @@ h2 {
   color: white;
   text-align: left;
   margin: 60px 0px 150px 50px;
+}
+
+/* ====== Variables par défaut (faciles à modifier) ====== */
+:root {
+  /* page accueil */
+  --search-height: 48px;
+  --search-width: clamp(0px, 300px, 700px);
+  --search-gap: 10px;
+  --search-padding: 12px;
+  --search-bg: #ffffff;
+  --search-border: #e2e2e2;
+  --search-text: #000000;
+  --search-placeholder: #E2E2E2;
+  --search-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --search-focus: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  /* page catalogue */
+  --card-width: 100%;
+  --card-radius: 16px;
+  --card-bg: #fff;
+  --card-shadow: 0 10px 24px rgba(0,0,0,.08);
+  --card-gap: 22px;
+  --card-padding: 16px;
+  --title-size: 1.1rem;
+  --text-size: .95rem;
+  --btn-bg: #111;
+  --btn-text: #fff;
+  --btn-hover-bg: #2b2b2b;
+  --btn-radius: 999px;
+  --btn-pad: 10px 16px;
+}
+
+/* page catalogue */
+/* ====== Composant Search ====== */
+.search {
+  width: var(--search-width);
+  height: var(--search-height);
+  background: var(--search-bg);
+  border: 1px solid var(--search-border);
+  border-radius: var(--search-radius);
+  box-shadow: var(--search-shadow);
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--search-gap);
+  padding: 0 var(--search-padding);
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+.search_icon {
+  font-size: 18px;
+  color: var(--search-icon);
+  display: inline-flex;
+  align-items: center;
+}
+
+.search_input {
+  width: 100%;
+  height: calc(var(--search-height) - 2px);
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: var(--search-font);
+  color: var(--search-text);
+}
+.search_input::placeholder { color: var(--search-placeholder); }
+
+/* ====== Variantes de forme ====== */
+.search_pill    { --search-radius: 999px; }
+
+.filter_btn {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filter_btn img {
+  border: none;
+  width: 22px;
+  height: 22px;
+}
+
+/* Conteneur des cartes */
+.cards_row {
+  display: flex;
+  justify-content: center;  /* centre les cartes */
+  gap: 90px;                /* espace entre elles */
+  margin: 40px 0;
+}
+
+/* Style de la carte */
+.card_2 {
+  background: #fff;                          /* fond blanc */
+  border-radius: 12px;                       /* coins arrondis */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);    /* ombre douce */
+  padding: 50px;
+  text-align: center;
+  width: 250px;                              /* largeur fixe */
+}
+
+/* Image */
+.card_img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;   /* garde le ratio de l’image */
+  margin-bottom: 10px;
+}
+
+/* Titre */
+.card_title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Prix */
+.card_price {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Bouton */
+.card_btn {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  padding: 8px 0;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.card_btn:hover {
+  background-color: #333;
 }
 
 /* Footer */
