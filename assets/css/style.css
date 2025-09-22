@@ -109,7 +109,6 @@ h2 {
 .card {
   background: linear-gradient(to bottom, #E2E2E2, #ffffff);
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 20px;
   width: 250px;
   text-align: center;
