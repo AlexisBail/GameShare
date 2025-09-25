@@ -75,7 +75,7 @@ h1 {
 .custom_btn {
   display: block;          /* le bouton prend toute la ligne */
   margin: 80px auto;       /* auto centre horizontalement */
-  background-color: #e6e6e6;
+  background-color: #e2e2e2;
   color: #000;
   font-size: 16px;
   font-weight: bold;
@@ -155,9 +155,9 @@ h2 {
   --card-padding: 16px;
   --title-size: 1.1rem;
   --text-size: .95rem;
-  --btn-bg: #111;
-  --btn-text: #fff;
-  --btn-hover-bg: #2b2b2b;
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
+  --btn-hover-bg: #000000;
   --btn-radius: 999px;
   --btn-pad: 10px 16px;
 }
@@ -226,7 +226,6 @@ h2 {
 .card_produit {
   background: #fff;                          /* fond blanc */
   border-radius: 12px;                       /* coins arrondis */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);    /* ombre douce */
   padding: 50px;
   text-align: center;
   width: 250px;                              /* largeur fixe */
@@ -436,7 +435,6 @@ h2 {
   background: #fff;
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   text-align: center;
 }
 
@@ -480,7 +478,6 @@ h2 {
   border-radius: 15px;
   padding: 20px;
   flex: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 /* Formulaire */
@@ -496,7 +493,7 @@ h2 {
 
 .form_card_paiement input {
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #E2E2E2;
   border-radius: 8px;
 }
 
@@ -666,7 +663,7 @@ h2 {
   display: block;
   margin: 50px auto; /* centre le bouton et espace du formulaire */
   padding: 12px 40px;
-  background-color: #E2E2E2; /* couleur thème violet foncé */
+  background-color: #E2E2E2;
   color: #000000;
   font-size: 16px;
   font-weight: bold;
@@ -677,7 +674,62 @@ h2 {
 }
 
 .btn_payer:hover {
-  background-color: #ffffff; /* violet un peu plus clair au hover */
+  background-color: #ffffff; 
+}
+
+/* page confirmation */
+.img_isaac {
+  margin-top: 50px;
+  display: block;
+  margin: 60px auto;
+}
+
+.resume_container_confirmation {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  min-height: 100vh;       /* occupe toute la hauteur de la page */
+}
+
+.confirmation {
+  color: #E2E2E2;
+  font-size: 19px;
+  margin-top: 10px;
+}
+
+.card_resume_confirmation {
+  background: linear-gradient(to right, #E2E2E2, #ffffff);
+  border-radius: 30px;
+  padding: 20px 30px;
+  width: 450px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card_resume_confirmation p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card_resume_confirmation .counter_confirmation {
+  display: inline-block;
+  background: #f5f5f5;
+  border: 1px solid #666;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.card_resume_confirmation .date_confirmation {
+  font-size: 14px;
+  color: #333;
+  margin-top: 20px;
 }
 
 /* Footer */
@@ -697,5 +749,5 @@ h2 {
 }
 
 .footer a:hover {
-  color: #0077cc; /* bleu au survol */
+  color: #ffffff; /* bleu au survol */
 }
