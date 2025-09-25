@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>GameShare - Paiement</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="../assets/img/logo.webp" alt="Logo GameShare">
+            <span>GameShare</span>
+        </div><br>
+        <nav class="menu">
+            <a href="../index.html">Accueil</a>
+            |
+            <a href="catalogue.html">Catalogue</a>
+            |
+            <a href="panier.html">Panier</a>
+        </nav>
+    </header>
+<main>
+
+    <h1>Paiement</h1>
+
+    <div class="checkout_container">
+  <!-- Carte formulaire -->
+  <div class="card_paiement form_card_paiement">
+    <h3>Informations de livraison</h3>
+    <form>
+      <label>Nom</label>
+      <input type="text">
+
+      <label>Adresse e-mail</label>
+      <input type="email">
+
+      <label>Adresse de facturation/livraison</label>
+      <input type="text">
+
+      <label>Pays</label>
+      <input type="text">
+
+      <label>Adresse</label>
+      <input type="text">
+
+      <div class="row">
+        <div class="col">
+          <label>Ville</label>
+          <input type="text">
+        </div>
+        <div class="col">
+          <label>Code postale</label>
+          <input type="text">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Carte résumé -->
+  <div class="card_paiement summary_card_paiement">
+    <h3>Résumé de la commande :</h3>
+    <ul>
+      <li>
+        - Playstation 5 :
+        <div class="counter_paiement">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+      </li>
+      <li>
+        - manette :
+        <div class="counter_paiement">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+      </li>
+      <li>
+        - FC 25 :
+        <div class="counter_paiement">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+      </li>
+    </ul>
+
+    <div class="totals">
+      <p>Sous Total : <span>00,00 €</span></p>
+      <p>Frais : <span>00,00 €</span></p>
+      <p class="total">Total : <span>00,00 €</span></p>
+    </div>
+  </div>
+</div>
+
+<div class="card_methode payment_card">
+  <h3>Méthodes de paiement</h3>
+
+  <div class="payment_logos">
+    <img src="../assets/img/cb.webp" alt="CB">
+    <img src="../assets/img/mastercard.webp" alt="MasterCard">
+    <img src="../assets/img/visa.webp" alt="Visa">
+    <img src="../assets/img/paypal.webp" alt="PayPal">
+  </div>
+
+  <form class="payement_form">
+    <label>N° de carte</label>
+    <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+
+    <div class="row">
+      <div class="col">
+        <label>Date d’expiration</label>
+        <input type="text" placeholder="XX/XX">
+      </div>
+      <div class="col">
+        <label>CVV</label>
+        <input type="text" placeholder="XXX">
+      </div>
+    </div>
+  </form>
+
+</div>
+<button class="btn_payer">Payer</button>
+
+</main>
+
+<footer class="footer">
+    <p>
+        © 2025 GameShare - Tous droits réservés 
+        |
+        <a href="#">Contact</a> 
+        |
+        <a href="#">Réseaux sociaux</a>
+    </p>
+</footer>
+    <script src="../assets/js/script.js"></script>
+    
+</body>
+</html>
