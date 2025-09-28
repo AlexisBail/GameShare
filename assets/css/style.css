@@ -851,3 +851,803 @@ h2 {
 .footer a:hover {
   color: #ffffff; /* bleu au survol */
 }
+
+/* ========================================================================== */
+/* 🎯 RESPONSIVE - VERSION MOBILE                                            */
+/* Desktop-first : s'applique sous 768px de largeur                           */
+/* ========================================================================== */
+@media (max-width: 768px) {
+
+/* ===== 🌐 Structure générale ===== */
+body {
+  /* padding: 0 15px; allège les bords gauche/droite */ 
+}
+
+main {
+  margin-top: 20px; /* espace léger sous la navbar */
+  padding: 25px;
+}
+
+/* ===== 🧭 Navbar - version mobile ===== */
+.navbar {
+  width: 104%; /* ✅ s’adapte à la largeur réelle sans débordement */
+  position: relative;
+  left: 0;
+  right: 0;
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  text-align: center;
+  min-height: 180px;
+  box-sizing: border-box;
+}
+
+
+
+.logo {
+  display: flex;
+  flex-direction: column-reverse; /* empile le texte et le logo verticalement */
+  align-items: center; /* centre le tout */
+}
+
+/* ✅ Texte GameShare en haut */
+.logo span {
+  display: block;
+  font-family: "Jockey One", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px; /* petit espace avant le logo */
+}
+
+/* ✅ Logo image juste en dessous du texte */
+.logo img {
+  height: 80px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ✅ Menu horizontal encore en dessous */
+.menu {
+  display: flex;
+  flex-direction: row; /* en ligne */
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* espace entre les liens */
+  margin-top: 15px; /* espace après le logo */
+}
+
+/* ✅ Style des liens */
+.menu a {
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ✅ Séparateurs si tu veux les garder */
+.menu span {
+  color: #000;
+}
+
+/* ===== Page Accueil ===== */
+h1 {
+  font-size: 30px; /* titre principal réduit */
+  margin-top: 20px;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 25px; /* sous-titres plus petits */
+  margin-top: 30px;
+}
+
+p, .p_1, .p_2, .p_3 {
+  font-size: 20px; /* texte plus petit */
+  line-height: 1.5; /* lisibilité mobile */
+  margin: 25px 0;
+}
+
+.p_3 {
+  margin: 30px 10px 60px 10px; /* marges adaptées */
+}
+
+/* ===== 🔘 Bouton principal ===== */
+.custom_btn {
+  margin: 40px auto; /* centré horizontalement */
+  padding: 10px 30px; /* réduit */
+  font-size: 14px;
+}
+
+/* ===== 🧩 Section Services ===== */
+.cards {
+  flex-direction: column; /* une carte par ligne */
+  align-items: center; /* centrage horizontal */
+  gap: 20px; /* espace entre les cartes */
+  margin: 30px 0;
+}
+
+.card {
+  width: 90%;
+  padding: 15px;
+  height: 250px;              /* ✅ même hauteur pour toutes */
+  display: flex;              /* active le centrage */
+  flex-direction: column;     /* empile titre et texte */
+  justify-content: center;    /* centre verticalement */
+  align-items: center;        /* centre horizontalement */
+  text-align: center;         /* centre le texte */
+}
+
+.card h3 {
+  font-size: 25px;
+}
+
+.card p {
+  font-size: 20px;
+}
+
+/* ========================================================================== */
+/* 🎮 PAGE CATALOGUE - RESPONSIVE MOBILE (≤768px)                             */
+/* ========================================================================== */
+@media (max-width: 768px) {
+.page_catalogue .menu {
+  margin-top: -15px; /* réduit l’espace entre le logo et le menu */
+}
+
+  /* ===== 🏷️ Titre principal ===== */
+  h1 {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  /* ===== 🔍 Barre de recherche + filtre ===== */
+  .search {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* ✅ On garde le style desktop */
+  width: 90%;
+  margin: 15px auto;
+  border-radius: 999px;
+  box-shadow: var(--search-shadow);
+  border: 1px solid var(--search-border);
+  background: var(--search-bg);
+
+  /* On adapte juste la taille */
+  height: 45px;
+  padding: 0 15px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.search_input {
+  font-size: 14px;
+}
+
+  .search_icon {
+    font-size: 18px;
+  }
+
+  .filter_btn img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* ===== 🧩 Grille des cartes produits ===== */
+  .cards_row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 15px;
+    justify-items: center;
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+
+  .card_produit {
+    width: 100%;
+    max-width: 160px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* légère ombre pour lisibilité */
+  }
+
+  .card_img {
+    height: 100px;
+    margin-bottom: 8px;
+    object-fit: contain;
+  }
+
+  .card_title {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .card_price {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .card_btn {
+    font-size: 12px;
+    width: 80px;
+    padding: 6px 0;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* ✅ Sur très petits écrans : 1 carte par ligne */
+  @media (max-width: 480px) {
+    .cards_row {
+      grid-template-columns: 1fr;
+    }
+
+    .card_produit {
+      max-width: 220px;
+    }
+  }
+
+  /* ===== 🔢 Pagination ===== */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+
+  .pagination a {
+    width: 35px;
+    height: 35px;
+    background-color: #D9D9D9;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .pagination a.active {
+    background-color: #fff;
+  }
+
+  .pagination a:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* ========================== */
+/* 📱 PAGE PANIER - MOBILE    */
+/* ========================== */
+@media (max-width: 768px) {
+.page_panier .menu {
+  margin-top: -15px; /* réduit l’espace entre le logo et le menu */
+}
+
+/* ===== 🧱 Structure générale ===== */
+main {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;           /* réduit le titre */
+  text-align: center;        /* centré */
+  margin: 20px 0;
+}
+
+/* ===== 🛒 Cartes Panier ===== */
+.cards_panier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.card_produit_panier {
+  display: flex;
+  flex-direction: row;         
+  align-items: flex-start;     
+  justify-content: flex-start; 
+  background: linear-gradient(to right, #E2E2E2, #ffffff);
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px auto;
+  width: 95%;
+  min-height: 180px;           
+  position: relative;
+  gap: 15px;
+}
+
+.card_img_panier {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+.card_content_panier {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.card_content_panier h3 {
+  font-size: 14px;
+  margin: 0px;
+}
+
+.extras_panier {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.desc_panier {
+  font-size: 12px;
+  line-height: 1.3;
+  margin: -5px 0;
+}
+
+.price_panier {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.counter_panier {
+  display: flex;
+  align-items: center;
+  background: #E2E2E2;
+  border: 1px solid #1A0033;
+  border-radius: 20px;
+  padding: 2px 6px;
+  gap: 4px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.counter_panier button {
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* 🗑️ Bouton de suppression */
+.delete {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ===== Séparateur ===== */
+.separator {
+  width: 90%;
+  margin: 30px auto;
+}
+
+/* ===== 🧾 Résumé panier ===== */
+.resume_panier {
+  width: 95%;                        /* ✅ même largeur que les autres cartes */
+  margin: 15px auto;                 /* ✅ centrée avec espace autour */
+  background: linear-gradient(to right, #E2E2E2, #ffffff);
+  border-radius: 20px;
+  padding: 15px;                     /* ✅ espace intérieur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;                /* ✅ texte centré */
+  min-height: 180px;                 /* ✅ même hauteur que les cartes produit */
+}
+
+.resume_panier h3 {
+  font-size: 14px;  /* 🔽 réduit la taille du titre */
+  margin-bottom: 8px;
+}
+
+.resume_panier p,
+.resume_panier .desc_panier,
+.resume_panier .price_panier {
+  font-size: 12px;  /* 🔽 texte plus petit et lisible */
+  line-height: 1.3; /* 🔽 moins d’écart vertical */
+  margin: 3px 0;    /* 🔽 espace réduit entre chaque ligne */
+}
+
+.resume_panier .price_panier {
+  font-weight: bold;
+  color: #1A0033;
+  margin-top: 5px;
+}
+
+/* ===== 💳 Bouton Paiement ===== */
+.paiement_container {
+  margin: 20px 0 40px 0;
+}
+
+.btn_paiement {
+  font-size: 14px;
+  padding: 10px 25px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ===== 💡 Section Suggestions ===== */
+.suggestions {
+  margin: 30px auto;
+  width: 100%;
+  text-align: center;
+}
+
+.suggestions h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100vw; /* ✅ empêche le débordement horizontal */
+}
+
+  /* ✅ 3 cartes visibles côte à côte */
+.carousel_track {
+  display: flex;
+  justify-content: space-between; /* ✅ répartit proprement les 3 cartes */
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 10px; /* petit espace sur les côtés */
+  box-sizing: border-box;
+}
+
+.carousel_item {
+  flex: 0 0 33.33%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 6px;            /* 🔽 réduit un peu le padding */
+  text-align: center;
+  min-height: 110px;       /* 🔽 hauteur réduite */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.carousel_item img {
+  width: 45px;      /* 🔽 réduit l’image */
+  margin-bottom: 2px;
+}
+
+.carousel_item h3 {
+  font-size: 11px;  /* 🔽 titre plus petit */
+  margin-bottom: 0px;
+}
+
+.carousel_item p {
+  font-size: 10px;  /* 🔽 prix plus petit */
+  margin-bottom: 2px;
+}
+
+.btn_detail {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;  /* 🔽 bouton réduit */
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Flèches gauche/droite */
+.carousel_btn {
+  font-size: 20px;
+  color: #fff;
+  padding: 5px;
+}
+}
+
+/* ========================== */
+/* 📱 PAGE PAIEMENT - MOBILE  */
+/* ========================== */
+/* ========================================================================== */
+/* 💳 PAGE PAIEMENT - RESPONSIVE MOBILE (structure Desktop conservée)         */
+/* ========================================================================== */
+
+@media (max-width: 768px) {
+.page_paiement .menu {
+  margin-top: -15px; /* réduit l’espace entre le logo et le menu */
+}
+
+/* ✅ Conteneur général du paiement 
+   - Gère la disposition horizontale/verticale des sections */
+/*
+.checkout_container {
+  flex-direction: column; 
+  align-items: center;
+  gap: 20px;
+  margin: 20px auto;
+}
+*/
+
+/* ✅ Cartes principales (formulaire + résumé)
+   - Taille, marges et padding */
+/*
+.card_paiement {
+  width: 95%;
+  max-width: 400px;
+  padding: 20px;
+}
+*/
+
+/* ✅ Titres des cartes (ex: "Informations de livraison") */
+/*
+.card_paiement h3 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+*/
+
+/* ✅ Carte du formulaire 
+   - Organisation interne des inputs */
+/*
+.form_card_paiement label {
+  font-size: 14px;
+}
+
+.form_card_paiement input {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.form_card_paiement .row {
+  flex-direction: column; 
+  gap: 10px;
+}
+*/
+
+/* ✅ Carte résumé commande 
+   - Liste des produits et compteurs */
+/*
+.summary_card_paiement ul li {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+*/
+
+/* ✅ Compteur quantité (- 1 +) */
+/*
+.counter_paiement {
+  padding: 2px 8px;
+  font-size: 14px;
+}
+
+.counter_paiement button {
+  font-size: 14px;
+}
+*/
+
+/* ✅ Section totaux (Sous total, frais, total) */
+/*
+.totals p {
+  font-size: 14px;
+}
+
+.total {
+  font-size: 16px;
+}
+*/
+
+/* ✅ Carte méthode de paiement */
+/*
+.card_methode {
+  width: 95%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.card_methode h3 {
+  font-size: 18px;
+}
+*/
+
+/* ✅ Logos des moyens de paiement (CB, Visa, etc.) */
+/*
+.payment_logos {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.payment_logos img {
+  max-width: 50px;
+  max-height: 30px;
+}
+*/
+
+/* ✅ Inputs du formulaire de paiement */
+/* 
+.card_methode input {
+  font-size: 14px;
+  padding: 8px;
+}
+
+.card_methode .row {
+  flex-direction: column;
+  gap: 10px;
+}
+*/
+
+/* ✅ Bouton "Payer" */
+/*
+.btn_paiement {
+  width: fit-content;
+  margin: 30px auto;
+  font-size: 14px;
+  padding: 10px 25px;
+}
+*/
+}
+
+/* ✅ PAGE CONFIRMATION - Responsive mobile */
+@media (max-width: 768px) {
+
+  /* 🔹 Image Isaac */
+  .img_isaac {
+    width: 100px;          /* plus petite */
+    height: auto;
+    margin: 30px auto 20px auto; /* centrée + espace réduit */
+    display: block;
+  }
+
+  /* 🔹 Titre principal */
+  h1 {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+
+  /* 🔹 Sous-titre */
+  .confirmation {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+
+  /* 🔹 Conteneur principal */
+  .resume_container_confirmation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;     /* pas besoin de 100vh sur mobile */
+    padding: 0 15px;      /* espace latéral */
+    margin-bottom: 40px;
+  }
+
+  /* 🔹 Carte du résumé */
+  .card_resume_confirmation {
+    width: 100%;          /* prend toute la largeur dispo */
+    max-width: 320px;     /* limite pour rester esthétique */
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+
+  /* 🔹 Lignes du résumé */
+  .card_resume_confirmation p {
+    font-size: 14px;
+    margin: 10px 0;
+    flex-wrap: wrap;       /* pour éviter les débordements */
+  }
+
+  /* 🔹 Compteur */
+  .counter_confirmation {
+    font-size: 13px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    min-width: 24px;
+  }
+
+  /* 🔹 Date */
+  .date_confirmation {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page_notfound h1 {
+    font-size: 24px; /* ✅ plus lisible sur mobile */
+  }
+
+  .btn_accueil {
+    font-size: 18px;
+    padding: 10px 25px;
+    margin-top: 25px;
+  }
+
+  .img_isaac_notfound {
+    height: 120px;
+  }
+}
+
+/* ===== 🦶 Footer - version mobile ===== */
+.footer {
+  background-color: #e6e6e6; /* fond gris */
+  text-align: center;        /* centre tout le contenu */
+  font-size: 12px;           /* texte plus petit */
+  line-height: 1.6;          /* espace vertical plus confortable */
+  padding: 15px 5px;         /* espace intérieur */
+  width: 105%;
+}
+
+/* Conteneur du texte et des liens */
+.footer p {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;      /* centre verticalement */
+  flex-wrap: wrap;          /* permet le retour à la ligne */
+  gap: 5px;                 /* espace entre les éléments */
+}
+
+/* ✅ Première ligne : texte principal */
+.footer p::after {
+  content: "";              /* crée une "barre de saut" invisible */
+  flex-basis: 100%;         /* force un retour à la ligne */
+  order: 1;                 /* s’assure que ça arrive après le texte */
+}
+
+/* ✅ Liens (2e ligne) */
+.footer a {
+  text-decoration: none;    /* pas de soulignement */
+  color: #000;              /* texte noir */
+  font-weight: bold;
+  font-size: inherit;
+  order: 2;                 /* affichés après le saut de ligne */
+}
+
+/* ✅ Ajoute un séparateur avant chaque lien sauf le premier */
+.footer a + a::before {
+  content: "|";
+  margin: 0 6px;
+  color: #000;
+}
+
+}
