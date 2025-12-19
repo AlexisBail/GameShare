@@ -1,0 +1,27 @@
+[
+    {
+	    "Console": "Playstation 5",
+	    "ConsoleLink": "//www.playstation.com/fr-fr/ps5/",
+	    "Year": 2020,
+	    "Maker": "Sony Interactive Entertainment",
+        "Price": 5
+	},
+	{
+	    "Console": "Xbox Series X",
+	    "ConsoleLink": "https://www.xbox.com/fr-FR/consoles/xbox-series-x",
+	    "Year": 2020,
+	    "Maker": "Microsoft"
+	},
+	{
+	    "Console": "Switch 2",
+	    "ConsoleLink": "https://www.nintendo.com/fr-fr/Hardware/Nintendo-Switch-2/Nintendo-Switch-2-2785301.html?srsltid=AfmBOor7fLPoPsANuLj3xpzl-wGdGSIQgwn2tGPjzXHky5r1ZUqqPbgr",
+	    "Year": 2025,
+	    "Maker": "Nintendo"
+	},
+	{
+	    "Console": "SteamDeck",
+	    "ConsoleLink": "https://www.steamdeck.com/fr/",
+	    "Year": 2023,
+	    "Maker": "Valve Corporation"
+	}
+]

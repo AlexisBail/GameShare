@@ -38,3 +38,35 @@ prevBtn.addEventListener('click', () => {
   }
   updateCarousel();
 });
+
+async function loadData() {
+  try {
+    const [gResp, cResp] = await Promise.all([
+      fetch('../json/game.json'),
+      fetch('../json/console.json')
+    ]);
+    if (!gResp.ok || !cResp.ok) throw new Error('Erreur réseau');
+    const [games, consoles] = await Promise.all([gResp.json(), cResp.json()]);
+    renderGames(games);
+    renderConsoles(consoles);
+  } catch (err) {
+    console.error('Impossible de charger les JSON:', err);
+  }
+}
+
+function renderGames(games) {
+  const container = document.getElementById('game-list');
+  container.innerHTML = games.map(g => `
+    <article class="card">
+      <h3>${g.Game}</h3>
+      <p>${g.Year || ''}</p>
+    </article>
+  `).join('');
+}
+
+function renderConsoles(consoles) {
+  const container = document.getElementById('console-list');
+  container.innerHTML = consoles.map(c => `<div>${c.name}</div>`).join('');
+}
+
+document.addEventListener('DOMContentLoaded', loadData);
