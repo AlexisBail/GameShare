@@ -35,3 +35,5 @@ Gestion de projet
 Git / GitHub : Versioning du code et suivi du déploiement.
 
 VS Code : Éditeur de texte principal.
+
+https://alexisbail.github.io/GameShare/
